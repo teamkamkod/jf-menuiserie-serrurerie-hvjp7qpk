@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JF - Menuiserie - Serrurerie à Concarneau | Fenêtres, volets, portes</title>
+<meta name="description" content="JF Menuiserie Serrurerie à Concarneau : fenêtres, volets, portes. Artisan local, 4,9/5 sur 58 avis. Devis et conseils au 02 98 60 49 40.">
+<meta name="keywords" content="menuisier Concarneau, serrurier Concarneau, fenêtres Concarneau, volets Concarneau, porte d'entrée Concarneau, dépannage serrure Finistère, menuiserie extérieure Bretagne">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #111111;
+    --secondary: #3A3A3A;
+    --background: #F7F7F5;
+    --text: #0E0E0E;
+    --cta: #FF5A1F;
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --radius: 0;
+    --max-width: 1200px;
+    --spacing-section: 80px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--background);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  a { color: inherit; text-decoration: none; }
+
+  .container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* BOUTONS CTA */
+  .cta {
+    display: inline-block;
+    background: var(--cta);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 14px 28px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.2s, transform 0.2s;
+    border-radius: var(--radius);
+    letter-spacing: 0.01em;
+  }
+  .cta:hover { background: #e04a10; transform: translateY(-1px); }
+
+  .cta-outline {
+    display: inline-block;
+    background: transparent;
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 13px 28px;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.2s, color 0.2s;
+    border-radius: var(--radius);
+  }
+  .cta-outline:hover { background: var(--primary); color: #fff; }
+
+  /* NAVIGATION */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(17,17,17,0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    padding: 0 20px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .nav-logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+    letter-spacing: -0.02em;
+  }
+  .nav-logo span { color: var(--cta); }
+
+  nav ul {
+    display: none;
+    list-style: none;
+    gap: 32px;
+    align-items: center;
+  }
+
+  nav ul.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: rgba(17,17,17,0.98);
+    padding: 20px;
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  nav ul.open li {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  nav ul.open li a {
+    display: block;
+    padding: 14px 0;
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  nav ul li a {
+    color: rgba(255,255,255,0.85);
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+    letter-spacing: 0.01em;
+  }
+  nav ul li a:hover { color: var(--cta); }
+
+  .nav-cta-link a {
+    color: var(--cta) !important;
+    font-weight: 600 !important;
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
+    aria-label: "Menu";
+  }
+  .burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .burger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger.active span:nth-child(2) { opacity: 0; }
+  .burger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  @media (min-width: 768px) {
+    nav ul {
+      display: flex !important;
+      flex-direction: row;
+      position: static;
+      background: transparent;
+      padding: 0;
+      border: none;
+    }
+    nav ul li { border: none !important; }
+    nav ul li a { padding: 0 !important; }
+    .burger { display: none; }
+  }
+
+  /* HERO */
+  #hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('assets/hero.jpg') center center / cover no-repeat;
+    z-index: 0;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(17,17,17,0.78) 0%, rgba(17,17,17,0.45) 100%);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    max-width: 800px;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--cta);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    margin-bottom: 24px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .hero-content p.hero-sub {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 12px;
+    font-weight: 400;
+  }
+
+  .hero-content p.hero-text {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.72);
+    margin-bottom: 36px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .hero-rating {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.75);
+    font-size: 0.9rem;
+  }
+
+  .stars-inline { color: #FFB800; letter-spacing: 2px; }
+
+  /* SECTIONS COMMUNES */
+  section { padding: var(--spacing-section) 0; }
+
+  .section-label {
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cta);
+    margin-bottom: 12px;
+  }
+
+  .section-heading {
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    color: var(--primary);
+  }
+
+  .section-text {
+    font-size: 1rem;
+    color: var(--secondary);
+    max-width: 640px;
+    line-height: 1.7;
+  }
+
+  .section-header { margin-bottom: 48px; }
+
+  /* ABOUT */
+  #apropos { background: #fff; }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+    color: var(--secondary);
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+
+  .about-stats {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .stat-number {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cta);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    font-weight: 500;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-visual img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+  }
+
+  .about-accent {
+    position: absolute;
+    bottom: -16px;
+    right: -16px;
+    width: 80px;
+    height: 80px;
+    background: var(--cta);
+    z-index: -1;
+  }
+
+  @media (min-width: 768px) {
+    .about-grid { grid-template-columns: 1fr 1fr; }
+    .about-visual img { height: 420px; }
+    .hero-actions { flex-direction: row; justify-content: center; }
+  }
+
+  /* PRESTATIONS */
+  #prestations { background: var(--background); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .service-card {
+    background: #fff;
+    padding: 36px 32px;
+    border-left: 3px solid transparent;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .service-card:hover {
+    border-left-color: var(--cta);
+    transform: translateX(4px);
+  }
+
+  .service-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--primary);
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+    color: var(--secondary);
+    line-height: 1.6;
+  }
+
+  @media (min-width: 768px) {
+    .services-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (min-width: 1024px) {
+    .services-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  /* AVIS */
+  #avis { background: var(--primary); color: #fff; }
+
+  #avis .section-heading { color: #fff; }
+  #avis .section-text { color: rgba(255,255,255,0.7); }
+  #avis .section-label { color: var(--cta); }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .review-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 32px;
+    position: relative;
+  }
+
+  .review-quote-icon {
+    font-size: 2.5rem;
+    color: var(--cta);
+    line-height: 1;
+    margin-bottom: 16px;
+    font-family: Georgia, serif;
+    opacity: 0.8;
+  }
+
+  .review-stars {
+    color: #FFB800;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+
+  .review-text {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    white-space: pre-line;
+  }
+
+  .review-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .review-avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--cta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .review-author-info strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #fff;
+  }
+
+  .review-author-info span {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.5);
+  }
+
+  @media (min-width: 768px) {
+    .reviews-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (min-width: 1024px) {
+    .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* GALERIE */
+  #galerie { background: #fff; }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .gallery-item {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .gallery-item:hover img { transform: scale(1.04); }
+
+  .gallery-item.large {
+    grid-column: span 2;
+  }
+
+  .gallery-item.large img { height: 300px; }
+
+  @media (min-width: 768px) {
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    .gallery-item img { height: 260px; }
+    .gallery-item.large { grid-column: span 1; }
+    .gallery-item.large img { height: 260px; }
+  }
+
+  /* HORAIRES & ADRESSE */
+  #horaires { background: var(--background); }
+
+  .hours-location-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+  }
+
+  .hours-table tr:last-child { border-bottom: none; }
+
+  .hours-table td {
+    padding: 12px 0;
+    font-size: 0.95rem;
+    color: var(--secondary);
+  }
+
+  .hours-table td:first-child {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: capitalize;
+    width: 50%;
+  }
+
+  .hours-table .closed { color: #999; font-style: italic; }
+
+  .address-block {
+    margin-top: 24px;
+  }
+
+  .address-block p {
+    font-size: 0.95rem;
+    color: var(--secondary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .address-block p strong {
+    color: var(--primary);
+    font-family: var(--font-heading);
+  }
+
+  .map-container {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  @media (min-width: 768px) {
+    .hours-location-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* CONTACT */
+  #contact { background: #fff; }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contact-info h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--primary);
+  }
+
+  .contact-info p {
+    font-size: 0.95rem;
+    color: var(--secondary);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    color: var(--secondary);
+  }
+
+  .contact-detail strong {
+    color: var(--primary);
+    font-family: var(--font-heading);
+  }
+
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--cta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .contact-form-wrap { }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+    letter-spacing: 0.02em;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid rgba(0,0,0,0.15);
+    background: var(--background);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s;
+    border-radius: var(--radius);
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--cta);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 140px; }
+
+  .form-submit { width: 100%; }
+
+  @media (min-width: 768px) {
+    .contact-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* TRUST SIGNALS */
+  #confiance { background: var(--primary); color: #fff; }
+
+  #confiance .section-heading { color: #fff; }
+  #confiance .section-text { color: rgba(255,255,255,0.7); }
+  #confiance .section-label { color: var(--cta); }
+
+  .trust-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .trust-item {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 28px 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .trust-icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .trust-item p {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  @media (min-width: 768px) {
+    .trust-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .trust-grid { grid-template-columns: repeat(6, 1fr); }
+  }
+
+  /* FOOTER */
+  footer {
+    background: #0A0A0A;
+    color: rgba(255,255,255,0.6);
+    padding: 48px 0 32px;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer-brand .nav-logo {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .footer-brand p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    max-width: 280px;
+  }
+
+  .footer-col h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 16px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul li a {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.55);
+    transition: color 0.2s;
+  }
+  .footer-col ul li a:hover { color: var(--cta); }
+
+  .footer-col p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .footer-bottom p { font-size: 0.82rem; }
+
+  .footer-cta-wrap { margin-top: 8px; }
+
+  @media (min-width: 768px) {
+    .footer-inner { grid-template-columns: 2fr 1fr 1fr; }
+    .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; }
+  }
+
+  /* ANIMATIONS */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* DIVIDER */
+  .divider {
+    width: 48px;
+    height: 3px;
+    background: var(--cta);
+    margin: 20px 0 32px;
+  }
+
+  /* PHONE LINK */
+  .phone-link {
+    color: var(--cta);
+    font-weight: 600;
+    font-family: var(--font-heading);
+  }
+  .phone-link:hover { text-decoration: underline; }
+
+/* ── GARDE-FOU NAV (post-traitement deterministe, pas le LLM) ────────────────
+   Le modele produit typiquement `nav ul.open { flex-direction:column }` SANS
+   media query. Sa specificite (0,2,1) bat la regle desktop `nav ul` (0,0,2)
+   quand celle-ci n'a pas !important sur flex-direction : au retour en desktop
+   apres ouverture du burger, le menu reste empile en colonne (menu casse).
+   Cette regle force l'etat desktop quel que soit l'etat de .open. */
+@media (min-width: 768px) {
+  nav ul, nav ul.open, nav.open ul, nav ul[data-open="true"] {
+    flex-direction: row !important;
+    position: static !important;
+    display: flex !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    width: auto !important;
+  }
+  .burger, button.burger, .nav-toggle, #burger, .burger-menu { display: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav aria-label="Navigation principale">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">JF <span>Menuiserie</span> Serrurerie</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="nav-menu" role="list">
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#prestations">Prestations</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#galerie">Réalisations</a></li>
+      <li><a href="#horaires">Horaires</a></li>
+      <li class="nav-cta-link"><a href="#contact">Devis gratuit</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" aria-label="Accueil">
+  <div class="hero-bg" role="img" aria-label="Menuiserie et serrurerie à Concarneau"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Artisan local à Concarneau</div>
+    <h1>JF - Menuiserie - Serrurerie, votre artisan à Concarneau</h1>
+    <p class="hero-sub">Fenêtres, volets et portes donnant sur l'extérieur : un travail soigné, des finitions de grande qualité et des délais respectés.</p>
+    <p class="hero-text">Situés au 964 Route Quimper à Concarneau, nous mettons notre savoir-faire au service de votre habitat. Une entreprise sérieuse, honnête et compétente, notée 4,9/5 sur 58 avis.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="cta" aria-label="Demander un devis gratuit">Demander un devis gratuit</a>
+      <a href="tel:0298604940" class="cta-outline" style="color:#fff;border-color:rgba(255,255,255,0.6);" aria-label="Nous appeler au 02 98 60 49 40">Appelez le 02 98 60 49 40</a>
+    </div>
+    <div class="hero-rating">
+      <span class="stars-inline" aria-label="5 étoiles">★★★★★</span>
+      <span>4,9/5 sur 58 avis Google</span>
+    </div>
+  </div>
+</section>
+
+<!-- À PROPOS -->
+<section id="apropos" aria-label="À propos de JF Menuiserie Serrurerie">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <p class="section-label">À propos</p>
+        <h2 class="section-heading">Une entreprise locale, sérieuse et à votre écoute</h2>
+        <div class="divider"></div>
+        <p>Chez JF - Menuiserie - Serrurerie, nous intervenons à Concarneau et alentours pour tous vos travaux de menuiserie et de serrurerie : fenêtres, volets et portes donnant sur l'extérieur. Notre équipe est professionnelle, à l'écoute et de très bon conseil.</p>
+        <p>Nous cherchons toujours la solution la plus adaptée à vos besoins, sans pousser vers les options les plus coûteuses. Le travail est soigné, les finitions sont de grande qualité et les délais sont respectés.</p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-number">4,9</span>
+            <span class="stat-label">Note moyenne /5</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">58</span>
+            <span class="stat-label">Avis clients</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">Local</span>
+            <span class="stat-label">Artisan Concarneau</span>
+          </div>
+        </div>
+        <br>
+        <a href="#contact" class="cta" aria-label="Demander un devis gratuit">Demander un devis gratuit</a>
+      </div>
+      <div class="about-visual fade-in">
+        <img src="assets/gallery-1.jpg" alt="Réalisation JF Menuiserie Serrurerie à Concarneau" loading="lazy">
+        <div class="about-accent" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESTATIONS -->
+<section id="prestations" aria-label="Nos prestations de menuiserie et serrurerie">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-label">Nos prestations</p>
+      <h2 class="section-heading">Ce que nous faisons pour vous</h2>
+      <div class="divider"></div>
+      <p class="section-text">Nous vous accompagnons pour vos projets de menuiserie et de serrurerie à Concarneau : fenêtres, volets et portes donnant sur l'extérieur. Pour connaître les prestations adaptées à votre besoin, contactez-nous au <a href="tel:0298604940" class="phone-link">02 98 60 49 40</a>.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in" aria-label="Prestation Fenêtres">
+        <span class="service-icon" aria-hidden="true">🪟</span>
+        <h3>Fenêtres</h3>
+        <p>Remplacement et pose de fenêtres, avec un travail soigné et des finitions de grande qualité.</p>
+      </div>
+      <div class="service-card fade-in" aria-label="Prestation Volets">
+        <span class="service-icon" aria-hidden="true">🏠</span>
+        <h3>Volets</h3>
+        <p>Pose et remplacement de volets pour votre habitat.</p>
+      </div>
+      <div class="service-card fade-in" aria-label="Prestation Portes extérieures">
+        <span class="service-icon" aria-hidden="true">🚪</span>
+        <h3>Portes donnant sur l'extérieur</h3>
+        <p>Remplacement et pose de portes donnant sur l'extérieur.</p>
+      </div>
+      <div class="service-card fade-in" aria-label="Prestation Serrurerie">
+        <span class="service-icon" aria-hidden="true">🔑</span>
+        <h3>Serrurerie</h3>
+        <p>Interventions de serrurerie, dont la réalisation de doubles de clés.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;" class="fade-in">
+      <a href="tel:0298604940" class="cta" aria-label="Nous appeler pour un devis">Appelez-nous au 02 98 60 49 40</a>
+    </div>
+  </div>
+</section>
+
+<!-- AVIS CLIENTS -->
+<section id="avis" aria-label="Avis de nos clients">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-label">Avis clients</p>
+      <h2 class="section-heading">Ce que disent nos clients</h2>
+      <div class="divider"></div>
+      <p class="section-text">Nos clients nous recommandent pour notre sérieux, notre écoute et la qualité de notre travail. Voici quelques avis parmi les 58 reçus, pour une note moyenne de 4,9/5.</p>
+    </div>
+    <div class="reviews-grid">
+
+      <div class="review-card fade-in" aria-label="Avis de Cathy Le Meur">
+        <div class="review-quote-icon" aria-hidden="true">"</div>
+        <div class="review-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+        <p class="review-text">Je recommande vivement cette entreprise de menuiserie. Suite à la rénovation complète de notre maison nous leur avons confié plusieurs travaux, notamment le remplacement de nos portes et fenêtres, la pose de placo, la réalisation d'un escalier, store banne, placards et le résultat est impeccable.
+
+Le travail est soigné, les finitions sont de grande qualité et les délais ont été respectés. L'équipe est professionnelle, à l'écoute et de très bon conseil. Ce que j'ai particulièrement apprécié, c'est qu'ils cherchent toujours la solution la plus adaptée à nos besoins sans pousser vers les options les plus coûteuses. C'est suffisamment rare pour être souligné.
+
+Une entreprise sérieuse, honnête et compétente que je recommande sans hésitation. Un grand merci à David, Gilles Mr Feat et Mme Rey.</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">C</div>
+          <div class="review-author-info">
+            <strong>Cathy Le Meur</strong>
+            <span>il y a un mois</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-in" aria-label="Avis de LE FLOCH Jean-Yves">
+        <div class="review-quote-icon" aria-hidden="true">"</div>
+        <div class="review-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+        <p class="review-text">Je recommande JF Menuiserie Serrurerie pour vos travaux.
+Personne à l'accueil très aimable au téléphone.
+Entreprise très sérieuse et très efficace.</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">L</div>
+          <div class="review-author-info">
+            <strong>LE FLOCH Jean-Yves</strong>
+            <span>il y a 2 mois</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-in" aria-label="Avis de Vincent">
+        <div class="review-quote-icon" aria-hidden="true">"</div>
+        <div class="review-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+        <p class="review-text">Au top ! Une clé à points cassée, double fait en 10 minutes, agréable, et décapsuleur offert pour arrêter de les casser. Je recommande !</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">V</div>
+          <div class="review-author-info">
+            <strong>Vincent</strong>
+            <span>il y a 2 mois</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section id="galerie" aria-label="Galerie de nos réalisations">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-label">Réalisations</p>
+      <h2 class="section-heading">Nos réalisations</h2>
+      <div class="divider"></div>
+      <p class="section-text">Découvrez en images quelques-unes de nos réalisations à Concarneau et dans les environs : fenêtres, volets et portes donnant sur l'extérieur, posés avec soin et finitions de grande qualité.</p>
+    </div>
+    <div class="gallery-grid fade-in">
+      <div class="gallery-item large">
+        <img src="assets/hero.jpg" alt="Réalisation menuiserie extérieure à Concarneau" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/gallery-1.jpg" alt="Pose de fenêtres à Concarneau par JF Menuiserie" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/gallery-2.jpg" alt="Pose de volets et portes extérieures à Concarneau" loading="lazy">
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;" class="fade-in">
+      <a href="#contact" class="cta" aria-label="Demander un devis gratuit">Demander un devis gratuit</a>
+    </div>
+  </div>
+</section>
+
+<!-- HORAIRES & ADRESSE -->
+<section id="horaires" aria-label="Horaires et adresse de JF Menuiserie Serrurerie">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-label">Nous trouver</p>
+      <h2 class="section-heading">Horaires et adresse</h2>
+      <div class="divider"></div>
+      <p class="section-text">Retrouvez-nous au 964 Route Quimper, 29900 Concarneau, France.</p>
+    </div>
+    <div class="hours-location-grid">
+      <div class="fade-in">
+        <table class="hours-table" aria-label="Horaires d'ouverture">
+          <tbody>
+            <tr>
+              <td>Lundi</td>
+              <td>08:30 – 18:00</td>
+            </tr>
+            <tr>
+              <td>Mardi</td>
+              <td>08:30 – 18:00</td>
+            </tr>
+            <tr>
+              <td>Mercredi</td>
+              <td>08:30 – 18:00</td>
+            </tr>
+            <tr>
+              <td>Jeudi</td>
+              <td>08:30 – 18:00</td>
+            </tr>
+            <tr>
+              <td>Vendredi</td>
+              <td>08:30 – 17:00</td>
+            </tr>
+            <tr>
+              <td>Samedi</td>
+              <td>09:00 – 13:00</td>
+            </tr>
+            <tr>
+              <td>Dimanche</td>
+              <td class="closed">Fermé</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="address-block" style="margin-top:32px;">
+          <p><span class="contact-icon" aria-hidden="true">📍</span><span><strong>Adresse :</strong> 964 Route Quimper, 29900 Concarneau, France</span></p>
+          <p><span class="contact-icon" aria-hidden="true">📞</span><span><strong>Téléphone :</strong> <a href="tel:0298604940" class="phone-link">02 98 60 49 40</a></span></p>
+          <p><span class="contact-icon" aria-hidden="true">✉️</span><span><strong>Email :</strong> <a href="mailto:contact@jf-menuiserie.bzh" class="phone-link">contact@jf-menuiserie.bzh</a></span></p>
+        </div>
+        <div style="margin-top:24px;">
+          <a href="tel:0298604940" class="cta" aria-label="Nous appeler">Nous appeler</a>
+        </div>
+      </div>
+      <div class="map-container fade-in" aria-label="Carte Google Maps de JF Menuiserie Serrurerie à Concarneau">
+        <iframe
+          src="https://www.google.com/maps?q=964+Route+Quimper,+29900+Concarneau,+France&output=embed"
+          title="Localisation JF Menuiserie Serrurerie à Concarneau"
+          loading="lazy"
+          allowfullscreen
+          aria-label="Carte de localisation de JF Menuiserie Serrurerie">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULAIRE DE CONTACT -->
+<section id="contact" aria-label="Formulaire de contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <p class="section-label">Contact</p>
+        <h2 class="section-heading">Contactez-nous</h2>
+        <div class="divider"></div>
+        <p>Pour vos travaux de menuiserie et de serrurerie à Concarneau, appelez-nous au <a href="tel:0298604940" class="phone-link">02 98 60 49 40</a> ou écrivez-nous à <a href="mailto:contact@jf-menuiserie.bzh" class="phone-link">contact@jf-menuiserie.bzh</a>. Nous vous conseillons sur la solution la plus adaptée à vos besoins.</p>
+        <div class="contact-detail">
+          <div class="contact-icon" aria-hidden="true">📞</div>
+          <div>
+            <strong>Téléphone</strong><br>
+            <a href="tel:0298604940" class="phone-link">02 98 60 49 40</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon" aria-hidden="true">✉️</div>
+          <div>
+            <strong>Email</strong><br>
+            <a href="mailto:contact@jf-menuiserie.bzh" class="phone-link">contact@jf-menuiserie.bzh</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon" aria-hidden="true">📍</div>
+          <div>
+            <strong>Adresse</strong><br>
+            964 Route Quimper, 29900 Concarneau, France
+          </div>
+        </div>
+        <div style="margin-top:24px;">
+          <a href="tel:0298604940" class="cta" aria-label="Appelez-nous au 02 98 60 49 40">Appelez-nous au 02 98 60 49 40</a>
+        </div>
+      </div>
+      <div class="contact-form-wrap fade-in">
+        <form action="https://checkout.kamkod.com/contact" method="POST" aria-label="Formulaire de demande de devis">
+          <input type="hidden" name="lead_id" value="ChIJvQXTNjpZ7IAR_A--qpYPTQk">
+          <div class="form-group">
+            <label for="name">Votre nom</label>
+            <input type="text" id="name" name="name" placeholder="Jean Dupont" required aria-required="true" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Votre adresse email</label>
+            <input type="email" id="email" name="email" placeholder="jean.dupont@email.fr" required aria-required="true" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" placeholder="Décrivez votre projet ou votre besoin (fenêtres, volets, porte, serrurerie...)." required aria-required="true"></textarea>
+          </div>
+          <button type="submit" class="cta form-submit" aria-label="Envoyer votre demande de devis gratuit">Demander un devis gratuit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST SIGNALS -->
+<section id="confiance" aria-label="Pourquoi nous faire confiance">
+  <div class="container">
+    <div class="section-header fade-in" style="text-align:center;">
+      <p class="section-label">Nos engagements</p>
+      <h2 class="section-heading">Pourquoi nous faire confiance</h2>
+      <div class="divider" style="margin:20px auto 0;"></div>
+    </div>
+    <p class="section-text fade-in" style="margin:16px auto 0;text-align:center;color:rgba(255,255,255,0.7);">JF - Menuiserie - Serrurerie est une entreprise locale de Concarneau, notée 4,9/5 sur 58 avis. Nos clients soulignent notre sérieux, notre honnêteté, notre écoute et la qualité de nos finitions. Nous cherchons toujours la solution la plus adaptée à vos besoins, sans pousser vers les options les plus coûteuses.</p>
+    <div class="trust-grid">
+      <div class="trust-item fade-in">
+        <span class="trust-icon" aria-hidden="true">🏡</span>
+        <p>Artisan menuisier-serrurier local</p>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon" aria-hidden="true">📋</span>
+        <p>Devis gratuit et sans engagement</p>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon" aria-hidden="true">⚡</span>
+        <p>Intervention rapide à Concarneau et alentours</p>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon" aria-hidden="true">✅</span>
+        <p>Travail soigné et finitions garanties</p>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon" aria-hidden="true">💳</span>
+        <p>Paiement CB accepté</p>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon" aria-hidden="true">🔐</span>
+        <p>Dépannage serrurerie en urgence</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;" class="fade-in">
+      <a href="#contact" class="cta" aria-label="Demander un devis gratuit">Demander un devis gratuit</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer aria-label="Pied de page">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="nav-logo">JF <span style="color:var(--cta)">Menuiserie</span> Serrurerie</span>
+        <p>Artisan menuisier-serrurier à Concarneau. Fenêtres, volets et portes extérieures. Travail soigné, finitions de qualité, délais respectés.</p>
+        <div class="footer-cta-wrap" style="margin-top:20px;">
+          <a href="tel:0298604940" class="cta" aria-label="Appelez-nous au 02 98 60 49 40">Appelez-nous au 02 98 60 49 40</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#prestations">Prestations</a></li>
+          <li><a href="#avis">Avis clients</a></li>
+          <li><a href="#galerie">Réalisations</a></li>
+          <li><a href="#horaires">Horaires</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>964 Route Quimper<br>29900 Concarneau, France</p>
+        <p style="margin-top:10px;"><a href="tel:0298604940" style="color:var(--cta);font-weight:600;">02 98 60 49 40</a></p>
+        <p style="margin-top:6px;"><a href="mailto:contact@jf-menuiserie.bzh" style="color:rgba(255,255,255,0.55);font-size:0.85rem;">contact@jf-menuiserie.bzh</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 JF - Menuiserie - Serrurerie — 964 Route Quimper, 29900 Concarneau, France — Téléphone : 02 98 60 49 40</p>
+      <p style="font-size:0.78rem;color:rgba(255,255,255,0.3);">Menuisier Concarneau · Serrurier Concarneau · Fenêtres Finistère · Volets Bretagne</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // BURGER MENU
+  const burger = document.getElementById('burger');
+  const navMenu = document.getElementById('nav-menu');
+
+  burger.addEventListener('click', function() {
+    const isOpen = navMenu.classList.toggle('open');
+    burger.classList.toggle('active', isOpen);
+    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  // Fermer le menu au clic sur un lien
+  navMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navMenu.classList.remove('open');
+      burger.classList.remove('active');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // ANIMATIONS FADE-IN
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  fadeEls.forEach(function(el) { observer.observe(el); });
+</script>
+<!-- KAMKOD:DEMO_START -->
+<script>
+(function(){
+  var URL = 'https://checkout.kamkod.com/d/ChIJvQXTNjpZ7IAR_A--qpYPTQk';
+  document.addEventListener('click', function(e){
+    var el = e.target.closest('a, button, [role="button"]');
+    if(!el || el.closest('form')) return;               /* formulaire -> endpoint contact */
+    if(el.classList.contains('cta')) { e.preventDefault(); window.location.href = URL; return; }
+    if(el.closest('header nav, nav')) return;           /* navigation interne de la démo */
+    var a = e.target.closest('a');
+    if(!a) return;                                      /* bouton seul hors nav: on laisse */
+    var href = a.getAttribute('href') || '';
+    if(href.charAt(0) === '#') return;                  /* ancres de section */
+    if(/^https?:|^\/\//i.test(href)) return;          /* lien externe réel */
+    e.preventDefault(); window.location.href = URL;     /* tel:, mailto:, javascript:… */
+  }, true);
+})();
+</script>
+<div id="kamkod-demo-banner" style="position:fixed;bottom:0;left:0;right:0;background:#000;color:#fff;padding:12px 16px;text-align:center;z-index:9999;font-family:system-ui,sans-serif;font-size:14px;">
+  Ceci est un aperçu de votre futur site — <a href="https://checkout.kamkod.com/d/ChIJvQXTNjpZ7IAR_A--qpYPTQk" style="color:#FFD700;font-weight:600;">activez-le maintenant</a>
+</div>
+<!-- KAMKOD:DEMO_END -->
+</body>
+</html>
